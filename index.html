@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array Day 1</title>
-    <link rel="icon" href="images/icon.png" />
+    <link rel="icon" href="images/array.png" />
   </head>
   <body>
     <p><em>Have a look at the JavaScript Console</em></p>
@@ -101,7 +101,7 @@
       console.log(totalYears);
 
       // 5. Sort the inventors by years lived
-      const oldest = inventors.sort(function(a, b) {
+      const oldest = inventors.sort(function (a, b) {
         const lastInventor = a.passed - a.year;
         const nextInventor = b.passed - b.year;
         return lastInventor > nextInventor ? -1 : 1;
@@ -120,11 +120,11 @@
       // 7. sort Exercise
       // Sort the people alphabetically by last name
       const alpha = people.sort((lastOne, nextOne) => {
-      const [aLast, aFirst] = lastOne.split(', ');
-      const [bLast, bFirst] = nextOne.split(', ');
-      return aLast > bLast ? 1 : -1;
-    });
-    console.log(alpha);
+        const [aLast, aFirst] = lastOne.split(", ");
+        const [bLast, bFirst] = nextOne.split(", ");
+        return aLast > bLast ? 1 : -1;
+      });
+      console.log(alpha);
 
       // 8. Reduce Exercise
       // Sum up the instances of each of these
@@ -145,16 +145,15 @@
         "truck",
       ];
 
-      const transportation = data.reduce(function(obj, item) {
-      if (!obj[item]) {
-        obj[item] = 0;
-      }
-      obj[item]++;
-      return obj;
-    }, {});
+      const transportation = data.reduce(function (obj, item) {
+        if (!obj[item]) {
+          obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+      }, {});
 
-    console.log(transportation);
-    
+      console.log(transportation);
     </script>
   </body>
 </html>
